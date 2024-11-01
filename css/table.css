@@ -1,0 +1,82 @@
+.table {
+      width: 100%;
+      margin-bottom: 1rem;
+      display: table;
+  }
+ .table{
+      background-color: var(--mode-bg);
+  }
+  .table, table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+ .table.hover>tbody>tr:hover, tbody, tfoot, thead {
+      color: var(--as-text-color);
+  }
+  
+ tbody, tfoot, thead {
+      background-color: var(--mk-trans);
+  }
+
+  .table td, .table th {
+      border: 1px solid var(--as-border);
+      border-width: 0 0 1px;
+      padding: 10px 15px;
+      vertical-align: top;
+      text-align: left;
+  }
+
+
+ .table tr.selected, .table.striped tbody tr.selected{
+      color: var(--white);
+      background-color: var(--dark-bg-primary,var(--light-bg-primary));
+      border-color: var(--dark-border-primary,var(--light-border-primary));
+  }
+  .table tr.selected td, .table.striped tbody tr.selected td{
+    border-color: var(--dark-border-primary,var(--light-border-primary));
+}
+
+
+
+
+  .table.striped tr {
+      border-bottom: none
+  }
+  
+  .table.striped>tbody>tr>td {
+      border-radius: 0
+  }
+  
+  .table.hover>tbody>tr {
+      -webkit-transition: background-color .25s;
+      transition: background-color .25s
+  }
+  
+
+  .table.right thead tr th,table.right tbody tr td {
+      text-align: right
+  }
+  
+  .table-fixed {
+      table-layout: fixed!important
+  }
+  
+  .table-auto {
+      table-layout: auto!important
+  }
+  
+  .table-container {
+      -webkit-overflow-scrolling: touch;
+      overflow: auto;
+      overflow-y: hidden;
+      max-width: 100%
+  }
+  .table.hover>tbody>tr:hover,.table.striped>tbody>tr:nth-child(odd) {
+      background-color: var(--as-table-bg-dark,var(--as-table-bg-light))
+  }
+  
+
+  .table.centered thead tr th,table.centered tbody tr td {
+      text-align: center;
+  }

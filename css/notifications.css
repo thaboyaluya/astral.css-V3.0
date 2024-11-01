@@ -1,0 +1,45 @@
+.notification {
+      position: relative;
+  }
+
+
+.notification {
+      background-color: var(--dark-bg-default,var(--light-bg-default));
+      color: var(--mode-color);
+      border-radius: .375rem;
+      padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+      margin: 1.2rem 0;
+  }
+
+  .notification.primary {
+      color: var(--white-500);
+      background-color: var(--dark-bg-primary,var(--light-bg-primary))
+    
+  }
+  .notification.secondary {
+      color: var(--primary-color);
+      background-color: var(--dark-bg-secondary,var(--light-bg-secondary))
+    
+  }
+  .notification.info {
+      color: var(--white-500);
+      background-color: var(--dark-bg-info,var(--light-bg-info))
+    
+  }
+  .notification.error {
+      color: var(--white-500);
+      background-color: var(--dark-bg-error,var(--light-bg-error))
+    
+  }
+
+  .notification.warning {
+      color: var(--white-500);
+      background-color: var(--dark-bg-warning,var(--light-bg-warning))
+    
+  }
+
+  .notification.success {
+      color: var(--white-500);
+      background-color: var(--dark-bg-success,var(--light-bg-success))
+    
+  }

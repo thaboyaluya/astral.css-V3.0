@@ -1,0 +1,37 @@
+
+/* Load Astral.CSS's base styles,utilities,grid and themes */
+
+@import url('../css/core.css');
+@import url('../css/utilities.css');
+@import url('../css/variables.css');
+@import url('../css/grid.css');
+
+/*  Load other Astral.CSS components */
+
+@import url('../css/alert.css');
+@import url('../css/animate.css');
+@import url('../css/article.css'); 
+@import url('../css/breadcrumb.css'); 
+@import url('../css/buttons.css'); 
+@import url('../css/card.css'); 
+@import url('../css/chip.css'); 
+@import url('../css/css-grid.css'); 
+@import url('../css/divider.css'); 
+@import url('../css/dropdown.css'); 
+@import url('../css/footer.css'); 
+@import url('../css/form.css'); 
+@import url('../css/loaders\ and\ spinners.css'); 
+@import url('../css/modal.css'); 
+@import url('../css/navbar.css'); 
+@import url('../css/newToast.css'); 
+@import url('../css/notifications.css');  
+@import url('../css/pagination.css'); 
+@import url('../css/panel.css'); 
+@import url('../css/section.css'); 
+@import url('../css/sidenav.css'); 
+@import url('../css/state.css'); 
+@import url('../css/tab.css'); 
+@import url('../css/table.css'); 
+@import url('../css/tags.css'); 
+@import url('../css/toast.css'); 
+@import url('../css/tooltip.css');

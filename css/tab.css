@@ -1,0 +1,54 @@
+.tabs {
+      -webkit-overflow-scrolling: touch;
+      align-items: stretch;
+      font-size: 1rem;
+      justify-content: space-between;
+      overflow: hidden;
+      overflow-x: auto;
+      margin: 15px 0;
+      -moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+  }
+  .tabs, .tabs ul {
+      display: flex;
+  }
+  .tabs{
+      white-space: nowrap;
+  }
+  .tabs li{
+      display: block;
+  }
+
+  .tabs a:hover, .tabs li.is-active a {
+      border-bottom-color: var(--dark-border-primary,var(--light-border-primary));
+  }
+
+  .tabs a {
+      border-bottom-color: var(--light-gray);
+      justify-content: center;
+      margin-bottom: -1px;
+      padding: .5em 1em;
+      vertical-align: top;
+      cursor: pointer;
+  }
+  
+  .tabs a, .tabs a:hover {
+      color: var(--mode-color);
+  }
+   .tabs a {
+      align-items: center;
+      display: flex;
+  }
+  .tabs a, .tabs ul {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+  }
+  .tabs ul {
+      align-items: center;
+      border-bottom-color: var(--as-border);
+      flex-grow: 1;
+      flex-shrink: 0;
+      justify-content: flex-start;
+  }
+

@@ -1,0 +1,281 @@
+.anim-fade-in {
+      animation-name: fade-in;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out
+  }
+  
+  .anim-fade-in.fast {
+      animation-duration: .3s
+  }
+  
+  @keyframes fade-in {
+      0% {
+          opacity: 0
+      }
+  
+      100% {
+          opacity: 1
+      }
+  }
+  
+  .anim-fade-out {
+      animation-name: fade-out;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out
+  }
+  
+  .anim-fade-out.fast {
+      animation-duration: .3s
+  }
+  
+  @keyframes fade-out {
+      0% {
+          opacity: 1
+      }
+  
+      100% {
+          opacity: 0
+      }
+  }
+  
+  .anim-fade-up {
+      opacity: 0;
+      animation-name: fade-up;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+      animation-delay: 1s
+  }
+  
+  @keyframes fade-up {
+      0% {
+          opacity: .8;
+          transform: translateY(100%)
+      }
+  
+      100% {
+          opacity: 1;
+          transform: translateY(0)
+      }
+  }
+  
+  .anim-fade-down {
+      animation-name: fade-down;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in
+  }
+  
+  @keyframes fade-down {
+      0% {
+          opacity: 1;
+          transform: translateY(0)
+      }
+  
+      100% {
+          opacity: .5;
+          transform: translateY(100%)
+      }
+  }
+  
+  .anim-grow-x {
+      width: 0%;
+      animation-name: grow-x;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease;
+      animation-delay: .5s
+  }
+  
+  @keyframes grow-x {
+      to {
+          width: 100%
+      }
+  }
+  
+  .anim-shrink-x {
+      animation-name: shrink-x;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-delay: .5s
+  }
+  
+  @keyframes shrink-x {
+      to {
+          width: 0%
+      }
+  }
+  
+  .anim-scale-in {
+      animation-name: scale-in;
+      animation-duration: .15s;
+      animation-timing-function: cubic-bezier(.2,0,.13,1.5)
+  }
+  
+  @keyframes scale-in {
+      0% {
+          opacity: 0;
+          transform: scale(.5)
+      }
+  
+      100% {
+          opacity: 1;
+          transform: scale(1)
+      }
+  }
+  
+  .anim-pulse {
+      animation-name: pulse;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite
+  }
+  
+  @keyframes pulse {
+      0% {
+          opacity: .3
+      }
+  
+      10% {
+          opacity: 1
+      }
+  
+      100% {
+          opacity: .3
+      }
+  }
+  
+  .anim-pulse-in {
+      animation-name: pulse-in;
+      animation-duration: .5s
+  }
+  
+  @keyframes pulse-in {
+      0% {
+          transform: scale3d(1,1,1)
+      }
+  
+      50% {
+          transform: scale3d(1.1,1.1,1.1)
+      }
+  
+      100% {
+          transform: scale3d(1,1,1)
+      }
+  }
+  
+  .anim-hover-grow,.hover-grow {
+      transition: transform .3s;
+      backface-visibility: hidden
+  }
+  
+  .anim-hover-grow:hover,.hover-grow:hover {
+      transform: scale(1.025)
+  }
+  
+  .anim-rotate {
+      animation: rotate-keyframes 1s linear infinite
+  }
+  
+  @keyframes rotate-keyframes {
+      100% {
+          transform: rotate(360deg)
+      }
+  }
+  .animation-toggle:not(:hover):not(:focus) [class*="animation-"] {
+      animation-name: none;
+  }
+  [class*=animation-] {
+      animation: .5s ease-out both;
+  }
+  .animation-fade {
+      animation-name: fade;
+      animation-duration: .8s;
+      animation-timing-function: linear;
+  }
+  @keyframes fade {
+      0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }  
+  }
+
+  .animation-shake {
+      animation-name: shake;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+  }
+  .animation-scale-down {
+      animation-name: scale-down;
+      animation-duration: 1s;
+  }
+  .animation-scale-up {
+      animation-name: scale-up;
+      animation-duration: 1s;
+  }
+
+
+
+  @keyframes shake {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      10% {
+        transform: translateX(-9px);
+      }
+      20% {
+        transform: translateX(8px);
+      }
+      30% {
+        transform: translateX(-7px);
+      }
+      40% {
+        transform: translateX(6px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+      60% {
+        transform: translateX(4px);
+      }
+      70% {
+        transform: translateX(-3px);
+      }
+      80% {
+        transform: translateX(2px);
+      }
+      90% {
+        transform: translateX(-1px);
+      }
+    }
+
+    @keyframes scale-up {
+      0% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes scale-down {
+      0% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes scale-down {
+      0% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }

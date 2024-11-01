@@ -1,0 +1,1084 @@
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: var(--base-size-1) var(--base-size-4);
+    font-size: 14px;
+    font-weight:  var(--text-weight-medium);
+    line-height: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: var(--border-width-1) solid;
+    border-radius: var(--borderRadius-medium);
+    appearance: none;
+    letter-spacing: .5px;
+    -webkit-tap-highlight-color: var(--mk-trans);
+    outline: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: var(--button-default-shadow-resting), 0 1px 0 rgba(31, 35, 40, .04), var(--button-default-shadow-inset), inset 0 1px 0 rgba(255, 255, 255, .25);
+    color: var(--button-default-fgColor-rest, var(--as-button-text));
+    background-color: var(--button-default-bgColor-rest, var(--as-button-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+    transition-property: color,background-color,box-shadow,border-color
+    }
+    
+    .button:hover {
+    text-decoration: none
+    }
+    
+    .button:disabled,.button.disabled,.button[aria-disabled=true] {
+    cursor: default
+    }
+    
+    .button i {
+    font-style: normal;
+    font-weight: var(--text-weight-medium);
+    opacity: .75
+    }
+    
+    .button .octicon {
+    margin-right: var(--base-size-1);
+    color: var(--as-color-muted);
+    vertical-align: text-bottom
+    }
+    
+    .button .octicon:only-child {
+    margin-right: var(--base-size-0)
+    }
+    
+    .button .Counter {
+    margin-left: 2px;
+    color: inherit;
+    text-shadow: none;
+    vertical-align: top;
+    background-color: var(--as-button-counter-bg)
+    }
+    
+    .button .dropdown-caret {
+    margin-left: var(--base-size-1);
+    opacity: .8
+    }
+    
+    
+    
+    .button:hover,.button.hover,[open]>.button {
+    background-color: var(--button-default-bgColor-hover, var(--as-button-hover-bg));
+    border-color: var(--button-default-borderColor-hover, var(--as-border));
+    transition-duration: .1s
+    }
+    
+    .button:active {
+    background-color: var(--button-default-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-default-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button.selected,.button[aria-selected=true] {
+    background-color: var(--button-default-bgColor-selected, var(--color-btn-selected-bg));
+    box-shadow: var(--shadow-inset, var(--color-primer-shadow-inset))
+    }
+    
+    .button:disabled,.button.disabled,.button[aria-disabled=true] {
+    color: var(--fgColor-disabled, var(--as-color-muted));
+    background-color: var(--button-default-bgColor-rest, var(--as-button-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border))
+    }
+    
+    .button:disabled .octicon,.button.disabled .octicon,.button[aria-disabled=true] .octicon {
+    color: var(--fgColor-disabled, var(--as-color-muted))
+    }
+    
+    .button-primary {
+    color: var(--button-primary-fgColor-rest, var(--as-button-primary-text));
+    background-color: var(--button-primary-bgColor-rest, var(--as-button-primary-bg));
+    border-color: var(--button-primary-borderColor-rest, var(--as-button-primary-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-primary-shadow)),var(--shadow-highlight, var(--as-button-primary-inset-shadow))
+    }
+    
+    .button-primary:hover,.button-primary.hover,[open]>.button-primary {
+    background-color: var(--button-primary-bgColor-hover, var(--as-button-primary-hover-bg));
+    border-color: var(--button-primary-borderColor-hover, var(--as-border));
+    
+    }
+    .button-primary:active {
+    background-color: var(--button-primary-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-primary-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-primary:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-primary:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-primary:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-primary:active,.button-primary.selected,.button-primary[aria-selected=true] {
+    background-color: var(--button-primary-bgColor-active, var(--as-button-primary-selected-bg));
+    box-shadow: var(--button-primary-shadow-selected, var(--as-button-primary-selected-shadow))
+    }
+    
+    .button-primary:disabled,.button-primary.disabled,.button-primary[aria-disabled=true] {
+    color: var(--button-primary-fgColor-disabled, var(--as-button-primary-disabled-text));
+    background-color: var(--button-primary-bgColor-disabled, var(--as-button-primary-disabled-bg));
+    border-color: var(--button-primary-borderColor-disabled, var(--as-button-primary-disabled-border))
+    }
+    
+    .button-primary:disabled .octicon,.button-primary.disabled .octicon,.button-primary[aria-disabled=true] .octicon {
+    color: var(--button-primary-fgColor-disabled, var(--as-button-primary-disabled-text))
+    }
+    
+    .button-primary .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-primary-bgColor-rest, var(--as-button-primary-counter-bg))
+    }
+    
+    .button-primary .octicon {
+    color: var(--button-primary-iconColor-rest, var(--as-button-primary-icon))
+    }
+    
+    a.button-primary:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-primary:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-primary:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-error {
+    color: var(--button-error-fgColor-rest, var(--as-button-error-text));
+    background-color: var(--button-error-bgColor-rest, var(--as-button-error-bg));
+    border-color: var(--button-error-borderColor-rest, var(--as-button-error-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-error-shadow)),var(--shadow-highlight, var(--as-button-error-inset-shadow))
+    }
+    
+    .button-error:hover,.button-error.hover,[open]>.button-error {
+    background-color: var(--button-error-bgColor-hover, var(--as-button-error-hover-bg));
+    border-color: var(--as-button-error-border, var(--as-border));
+    
+    }
+    .button-error:active {
+    background-color: var(--button-error-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-error-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-error:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-error:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-error:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-error:active,.button-error.selected,.button-error[aria-selected=true] {
+    background-color: var(--button-error-bgColor-active, var(--as-button-error-selected-bg));
+    box-shadow: var(--button-error-shadow-selected, var(--as-button-error-selected-shadow))
+    }
+    
+    .button-error:disabled,.button-error.disabled,.button-error[aria-disabled=true] {
+    color: var(--button-error-fgColor-disabled, var(--as-button-error-disabled-text));
+    background-color: var(--button-error-bgColor-disabled, var(--as-button-error-disabled-bg));
+    border-color: var(--button-error-borderColor-disabled, var(--as-button-error-disabled-border))
+    }
+    
+    .button-error:disabled .octicon,.button-error.disabled .octicon,.button-error[aria-disabled=true] .octicon {
+    color: var(--button-error-fgColor-disabled, var(--as-button-error-disabled-text))
+    }
+    
+    .button-error .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-error-bgColor-rest, var(--as-button-error-counter-bg))
+    }
+    
+    .button-error .octicon {
+    color: var(--button-error-iconColor-rest, var(--as-button-error-icon))
+    }
+    
+    a.button-error:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-error:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-error:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-warning {
+    color: var(--button-warning-fgColor-rest, var(--as-button-warning-text));
+    background-color: var(--button-warning-bgColor-rest, var(--as-button-warning-bg));
+    border-color: var(--button-warning-borderColor-rest, var(--as-button-warning-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-warning-shadow)),var(--shadow-highlight, var(--as-button-warning-inset-shadow))
+    }
+    
+    .button-warning:hover,.button-warning.hover,[open]>.button-warning {
+    background-color: var(--button-warning-bgColor-hover, var(--as-button-warning-hover-bg));
+    border-color: var(--as-button-warning-border, var(--as-border));
+    
+    }
+    .button-warning:active {
+    background-color: var(--button-warning-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-warning-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    .button-warning:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-warning:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-warning:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-warning:active,.button-warning.selected,.button-warning[aria-selected=true] {
+    background-color: var(--button-warning-bgColor-active, var(--as-button-warning-selected-bg));
+    box-shadow: var(--button-warning-shadow-selected, var(--as-button-warning-selected-shadow))
+    }
+    
+    .button-warning:disabled,.button-warning.disabled,.button-warning[aria-disabled=true] {
+    color: var(--button-warning-fgColor-disabled, var(--as-button-warning-disabled-text));
+    background-color: var(--button-warning-bgColor-disabled, var(--as-button-warning-disabled-bg));
+    border-color: var(--button-warning-borderColor-disabled, var(--as-button-warning-disabled-border))
+    }
+    
+    .button-warning:disabled .octicon,.button-warning.disabled .octicon,.button-warning[aria-disabled=true] .octicon {
+    color: var(--button-warning-fgColor-disabled, var(--as-button-warning-disabled-text))
+    }
+    
+    .button-warning .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-warning-bgColor-rest, var(--as-button-warning-counter-bg))
+    }
+    
+    .button-warning .octicon {
+    color: var(--button-warning-iconColor-rest, var(--as-button-warning-icon))
+    }
+    
+    a.button-warning:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-warning:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-warning:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    .button-success {
+    color: var(--button-success-fgColor-rest, var(--as-button-success-text));
+    background-color: var(--button-success-bgColor-rest, var(--as-button-success-bg));
+    border-color: var(--button-success-borderColor-rest, var(--as-button-success-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-success-shadow)),var(--shadow-highlight, var(--as-button-success-inset-shadow))
+    }
+    
+    .button-success:hover,.button-success.hover,[open]>.button-success {
+    background-color:  var(--as-button-success-hover-bg);
+    border-color: var(--as-button-success-border, var(--as-border));
+    
+    }
+    .button-success:active {
+    background-color: var(--button-success-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-success-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-success:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-success:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-success:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-success:active,.button-success.selected,.button-success[aria-selected=true] {
+    background-color: var(--button-success-bgColor-active, var(--as-button-success-selected-bg));
+    box-shadow: var(--button-success-shadow-selected, var(--as-button-success-selected-shadow))
+    }
+    
+    .button-success:disabled,.button-success.disabled,.button-success[aria-disabled=true] {
+    color: var(--button-success-fgColor-disabled, var(--as-button-success-disabled-text));
+    background-color: var(--button-success-bgColor-disabled, var(--as-button-success-disabled-bg));
+    border-color: var(--button-success-borderColor-disabled, var(--as-button-success-disabled-border))
+    }
+    
+    .button-success:disabled .octicon,.button-success.disabled .octicon,.button-success[aria-disabled=true] .octicon {
+    color: var(--button-success-fgColor-disabled, var(--as-button-success-disabled-text))
+    }
+    
+    .button-success .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-success-bgColor-rest, var(--as-button-success-counter-bg))
+    }
+    
+    .button-success .octicon {
+    color: var(--button-success-iconColor-rest, var(--as-button-success-icon))
+    }
+    
+    a.button-success:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-success:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-success:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-info {
+    color: var(--button-info-fgColor-rest, var(--as-button-info-text));
+    background-color: var(--button-info-bgColor-rest, var(--as-button-info-bg));
+    border-color: var(--button-info-borderColor-rest, var(--as-button-info-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-info-shadow)),var(--shadow-highlight, var(--as-button-info-inset-shadow))
+    }
+    
+    .button-info:hover,.button-info.hover,[open]>.button-info {
+    background-color: var(--button-info-bgColor-hover, var(--as-button-info-hover-bg));
+    border-color: var(--as-button-info-hover-border, var(--as-border));
+    
+    }
+    
+    .button-info:active {
+    background-color: var(--button-info-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-info-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-info:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-info:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-info:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-info:active,.button-info.selected,.button-info[aria-selected=true] {
+    background-color: var(--button-info-bgColor-active, var(--as-button-info-selected-bg));
+    box-shadow: var(--button-info-shadow-selected, var(--as-button-info-selected-shadow))
+    }
+    
+    .button-info:disabled,.button-info.disabled,.button-info[aria-disabled=true] {
+    color: var(--button-info-fgColor-disabled, var(--as-button-info-disabled-text));
+    background-color: var(--button-info-bgColor-disabled, var(--as-button-info-disabled-bg));
+    border-color: var(--button-info-borderColor-disabled, var(--as-button-info-disabled-border))
+    }
+    
+    .button-info:disabled .octicon,.button-info.disabled .octicon,.button-info[aria-disabled=true] .octicon {
+    color: var(--button-info-fgColor-disabled, var(--as-button-info-disabled-text))
+    }
+    
+    .button-info .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-info-bgColor-rest, var(--as-button-info-counter-bg))
+    }
+    
+    .button-info .octicon {
+    color: var(--button-info-iconColor-rest, var(--as-button-info-icon))
+    }
+    
+    a.button-info:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-info:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-info:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-secondary {
+    color: var(--button-secondary-fgColor-rest, var(--as-button-secondary-text));
+    background-color: var(--button-secondary-bgColor-rest, var(--as-button-secondary-bg));
+    border-color: var(--button-secondary-borderColor-rest, var(--as-button-secondary-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-secondary-shadow)),var(--shadow-highlight, var(--as-button-secondary-inset-shadow))
+    }
+    
+    .button-secondary:hover,.button-secondary.hover,[open]>.button-secondary {
+    background-color: var(--button-secondary-bgColor-hover, var(--as-button-secondary-hover-bg));
+    border-color: var(--as-button-secondary-hover-border, var(--as-border));
+    
+    }
+    
+    .button-secondary:active {
+    background-color: var(--button-secondary-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-secondary-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-secondary:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-secondary:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-secondary:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-secondary:active,.button-secondary.selected,.button-secondary[aria-selected=true] {
+    background-color: var(--button-secondary-bgColor-active, var(--as-button-secondary-selected-bg));
+    box-shadow: var(--button-secondary-shadow-selected, var(--as-button-secondary-selected-shadow))
+    }
+    
+    .button-secondary:disabled,.button-secondary.disabled,.button-secondary[aria-disabled=true] {
+    color: var(--button-secondary-fgColor-disabled, var(--as-button-secondary-disabled-text));
+    background-color: var(--button-secondary-bgColor-disabled, var(--as-button-secondary-disabled-bg));
+    border-color: var(--button-secondary-borderColor-disabled, var(--as-button-secondary-disabled-border))
+    }
+    
+    .button-secondary:disabled .octicon,.button-secondary.disabled .octicon,.button-secondary[aria-disabled=true] .octicon {
+    color: var(--button-secondary-fgColor-disabled, var(--as-button-secondary-disabled-text))
+    }
+    
+    .button-secondary .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-secondary-bgColor-rest, var(--as-button-secondary-counter-bg))
+    }
+    
+    .button-secondary .octicon {
+    color: var(--button-secondary-iconColor-rest, var(--as-button-secondary-icon))
+    }
+    
+    a.button-secondary:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-secondary:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-secondary:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    .button-dark {
+    color: var(--button-dark-fgColor-rest, var(--as-button-dark-text));
+    background-color: var(--button-dark-bgColor-rest, var(--as-button-dark-bg));
+    border-color: var(--button-dark-borderColor-rest, var(--as-button-dark-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-dark-shadow)),var(--shadow-highlight, var(--as-button-dark-inset-shadow))
+    }
+    
+    .button-dark:hover,.button-dark.hover,[open]>.button-dark {
+    background-color: var(--button-dark-bgColor-hover, var(--as-button-dark-hover-bg));
+    border-color: var(--as-button-dark-border, var(--as-border));
+    
+    }
+    .button-dark:active {
+    background-color: var(--button-dark-bgColor-active, var(--as-button-active-bg));
+    border-color: var(--button-dark-borderColor-active, var(--as-button-active-border));
+    transition: none
+    }
+    
+    .button-dark:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-dark:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    .button-dark:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-dark:active,.button-dark.selected,.button-dark[aria-selected=true] {
+    background-color: var(--button-dark-bgColor-active, var(--as-button-dark-selected-bg));
+    box-shadow: var(--button-dark-shadow-selected, var(--as-button-dark-selected-shadow))
+    }
+    
+    .button-dark:disabled,.button-dark.disabled,.button-dark[aria-disabled=true] {
+    color: var(--button-dark-fgColor-disabled, var(--as-button-dark-disabled-text));
+    background-color: var(--button-dark-bgColor-disabled, var(--as-button-dark-disabled-bg));
+    border-color: var(--button-dark-borderColor-disabled, var(--as-button-dark-disabled-border))
+    }
+    
+    .button-dark:disabled .octicon,.button-dark.disabled .octicon,.button-dark[aria-disabled=true] .octicon {
+    color: var(--button-dark-fgColor-disabled, var(--as-button-dark-disabled-text))
+    }
+    
+    .button-dark .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-dark-bgColor-rest, var(--as-button-dark-counter-bg))
+    }
+    
+    .button-dark .octicon {
+    color: var(--button-dark-iconColor-rest, var(--as-button-dark-icon))
+    }
+    
+    a.button-dark:focus {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    a.button-dark:focus:not(:focus-visible) {
+    
+    box-shadow: none
+    }
+    
+    a.button-dark:focus-visible {
+    
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    .button-outline-info {
+    color: var(--button-outline-fgColor-rest, var(--as-button-outline-text))
+    }
+    
+    .button-outline-info:hover,[open]>.button-outline-info {
+    color: var(--button-outline-info-fgColor-hover, var(--as-button-outline-hover-text));
+    background-color: var(--button-outline-info-bgColor-hover, var(--as-button-outline-hover-bg));
+    border-color: var(--button-outline-info-borderColor-hover, var(--as-button-outline-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-hover-inset-shadow))
+    }
+    
+    .button-outline-info:hover .Counter,[open]>.button-outline-info .Counter {
+    background-color: var(--button-outline-info-bgColor-hover, var(--as-button-outline-hover-counter-bg))
+    }
+    
+    .button-outline-info:hover .octicon,[open]>.button-outline-info .octicon {
+    color: inherit
+    }
+    
+    .button-outline-info:active,.button-outline-info.selected,.button-outline-info[aria-selected=true] {
+    color: var(--button-outline-info-fgColor-active, var(--as-button-outline-selected-text));
+    background-color: var(--button-outline-info-bgColor-active, var(--as-button-outline-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-selected-shadow))
+    }
+    
+    .button-outline-info:active:focus,.button-outline-info.selected:focus,.button-outline-info[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-info:active:focus:not(:focus-visible),.button-outline-info.selected:focus:not(:focus-visible),.button-outline-info[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-info:active:focus-visible,.button-outline-info.selected:focus-visible,.button-outline-info[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-info:disabled,.button-outline-info.disabled,.button-outline-info[aria-disabled=true] {
+    color: var(--button-outline-info-fgColor-disabled, var(--as-button-outline-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-info:disabled .Counter,.button-outline-info.disabled .Counter,.button-outline-info[aria-disabled=true] .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-info .Counter {
+    color: inherit;
+    background-color: var(--button-outline-info-bgColor-rest, var(--as-button-outline-counter-bg))
+    }
+    
+    .button-outline-error {
+    color: var(--button-outline-error-fgColor-rest, var(--as-button-outline-error-text));
+    }
+    
+    .button-outline-error:hover,[open]>.button-outline-error {
+    color: var(--button-outline-error-fgColor-hover, var(--as-button-outline-error-hover-text));
+    background-color: var(--button-outline-error-bgColor-hover, var(--as-button-outline-error-hover-bg));
+    border-color: var(--button-outline-error-borderColor-hover, var(--as-button-outline-error-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-error-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-error-hover-inset-shadow))
+    }
+    
+    .button-outline-error:hover .Counter,[open]>.button-outline-error .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-hover, var(--as-button-outline-error-hover-counter-bg))
+    }
+    
+    .button-outline-error:hover .octicon,[open]>.button-outline-error .octicon {
+    color: inherit
+    }
+    
+    .button-outline-error:active,.button-outline.selected,.button-outline-error[aria-selected=true] {
+    color: var(--button-outline-error-fgColor-active, var(--as-button-outline-error-selected-text));
+    background-color: var(--button-outline-error-bgColor-active, var(--as-button-outline-error-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-error-selected-border));
+    box-shadow: var(--button-outline-error-shadow-selected, var(--as-button-outline-error-selected-shadow))
+    }
+    
+    .button-outline-error:active:focus,.button-outline-error.selected:focus,.button-outline-error[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-error:active:focus:not(:focus-visible),.button-outline-error.selected:focus:not(:focus-visible),.button-outline-error[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-error:active:focus-visible,.button-outline-error.selected:focus-visible,.button-outline-error[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-error:disabled,.button-outline.disabled,.button-outline-error[aria-disabled=true] {
+    color: var(--button-outline-error-fgColor-disabled, var(--as-button-outline-error-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-error-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-error:disabled .Counter,.button-outline-error.disabled .Counter,.button-outline-error[aria-disabled=true] .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-error .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-outline-bgColor-rest, var(--as-button-outline-error-counter-bg))
+    }
+    .button-outline-success {
+    color: var(--button-outline-success-fgColor-rest, var(--as-button-outline-success-text))
+    }
+    
+    .button-outline-success:hover,[open]>.button-outline-success {
+    color: var(--button-outline-success-fgColor-hover, var(--as-button-outline-success-hover-text));
+    background-color: var(--button-outline-success-bgColor-hover, var(--as-button-outline-success-hover-bg));
+    border-color: var(--button-outline-success-borderColor-hover, var(--as-button-outline-success-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-success-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-success-hover-inset-shadow))
+    }
+    
+    .button-outline-success:hover .Counter,[open]>.button-outline-success .Counter {
+    background-color: var(--button-outline-success-bgColor-hover, var(--as-button-outline-success-hover-counter-bg))
+    }
+    
+    .button-outline-success:hover .octicon,[open]>.button-outline-success .octicon {
+    color: inherit
+    }
+    
+    .button-outline-success:active,.button-outline.selected,.button-outline-success[aria-selected=true] {
+    color: var(--button-outline-success-fgColor-active, var(--as-button-outline-success-selected-text));
+    background-color: var(--button-outline-success-bgColor-active, var(--as-button-outline-success-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-success-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-success-selected-shadow))
+    }
+    
+    .button-outline-success:active:focus,.button-outline-success.selected:focus,.button-outline-success[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-success:active:focus:not(:focus-visible),.button-outline-success.selected:focus:not(:focus-visible),.button-outline-success[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-success:active:focus-visible,.button-outline-success.selected:focus-visible,.button-outline-success[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-success:disabled,.button-outline.disabled,.button-outline-success[aria-disabled=true] {
+    color: var(--button-outline-success-fgColor-disabled, var(--as-button-outline-success-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-success-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-success:disabled .Counter,.button-outline-success.disabled .Counter,.button-outline-success[aria-disabled=true] .Counter {
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-success .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-outline-bgColor-rest, var(--as-button-outline-success-counter-bg))
+    }
+    
+    
+    
+    
+    .button-outline-primary {
+    color: var(--button-outline-primary-fgColor-rest, var(--as-button-outline-primary-text))
+    }
+    
+    .button-outline-primary:hover,[open]>.button-outline-primary {
+    color: var(--button-outline-primary-fgColor-hover, var(--as-button-outline-primary-hover-text));
+    background-color: var(--button-outline-primary-bgColor-hover, var(--as-button-outline-primary-hover-bg));
+    border-color: var(--button-outline-primary-borderColor-hover, var(--as-button-outline-primary-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-primary-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-primary-hover-inset-shadow))
+    }
+    
+    .button-outline-primary:hover .Counter,[open]>.button-outline-primary .Counter {
+    background-color: var(--button-outline-primary-bgColor-hover, var(--as-button-outline-primary-hover-counter-bg))
+    }
+    
+    .button-outline-primary:hover .octicon,[open]>.button-outline-primary .octicon {
+    color: inherit
+    }
+    
+    .button-outline-primary:active,.button-outline.selected,.button-outline-primary[aria-selected=true] {
+    color: var(--button-outline-primary-fgColor-active, var(--as-button-outline-primary-selected-text));
+    background-color: var(--button-outline-primary-bgColor-active, var(--as-button-outline-primary-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-primary-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-primary-selected-shadow))
+    }
+    
+    .button-outline-primary:active:focus,.button-outline-primary.selected:focus,.button-outline-primary[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-primary:active:focus:not(:focus-visible),.button-outline-primary.selected:focus:not(:focus-visible),.button-outline-primary[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-primary:active:focus-visible,.button-outline-primary.selected:focus-visible,.button-outline-primary[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-primary:disabled,.button-outline.disabled,.button-outline-primary[aria-disabled=true] {
+    color: var(--button-outline-primary-fgColor-disabled, var(--as-button-outline-primary-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-primary-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-primary:disabled .Counter,.button-outline-primary.disabled .Counter,.button-outline-primary[aria-disabled=true] .Counter {
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-primary .Counter {
+    color: inherit;
+    background-color: var(--button-outline-primary-bgColor-rest, var(--as-button-outline-primary-counter-bg))
+    }
+    
+    .button-outline-warning {
+    color: var(--button-outline-warning-fgColor-rest, var(--as-button-outline-warning-text))
+    }
+    
+    .button-outline-warning:hover,[open]>.button-outline-warning {
+    color: var(--button-outline-warning-fgColor-hover, var(--as-button-outline-warning-hover-text));
+    background-color: var(--button-outline-warning-bgColor-hover, var(--as-button-outline-warning-hover-bg));
+    border-color: var(--button-outline-warning-borderColor-hover, var(--as-button-outline-warning-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-warning-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-warning-hover-inset-shadow))
+    }
+    
+    .button-outline-warning:hover .Counter,[open]>.button-outline-warning .Counter {
+    background-color: var(--button-outline-warning-bgColor-hover, var(--as-button-outline-warning-hover-counter-bg))
+    }
+    
+    .button-outline-warning:hover .octicon,[open]>.button-outline-warning .octicon {
+    color: inherit
+    }
+    
+    .button-outline-warning:active,.button-outline.selected,.button-outline-warning[aria-selected=true] {
+    color: var(--button-outline-warning-fgColor-active, var(--as-button-outline-warning-selected-text));
+    background-color: var(--button-outline-warning-bgColor-active, var(--as-button-outline-warning-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-warning-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-warning-selected-shadow))
+    }
+    
+    .button-outline-warning:active:focus,.button-outline-warning.selected:focus,.button-outline-warning[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-warning:active:focus:not(:focus-visible),.button-outline-warning.selected:focus:not(:focus-visible),.button-outline-warning[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-warning:active:focus-visible,.button-outline-warning.selected:focus-visible,.button-outline-warning[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-warning:disabled,.button-outline.disabled,.button-outline-warning[aria-disabled=true] {
+    color: var(--button-outline-fgColor-disabled, var(--as-button-outline-warning-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-warning-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-warning:disabled .Counter,.button-outline-warning.disabled .Counter,.button-outline-warning[aria-disabled=true] .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-warning .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-outline-bgColor-rest, var(--as-button-outline-warning-counter-bg))
+    }
+    
+    .button-outline-secondary {
+    color: var(--button-outline-secondary-fgColor-rest, var(--as-button-outline-secondary-text))
+    }
+    
+    .button-outline-secondary:hover,[open]>.button-outline-secondary {
+    color: var(--button-outline-secondary-fgColor-hover, var(--as-button-outline-secondary-hover-text));
+    background-color: var(--button-outline-secondary-bgColor-hover, var(--as-button-outline-secondary-hover-bg));
+    border-color: var(--button-outline-secondary-borderColor-hover, var(--as-button-outline-secondary-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-secondary-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-secondary-hover-inset-shadow))
+    }
+    
+    .button-outline-secondary:hover .Counter,[open]>.button-outline-secondary .Counter {
+    background-color: var(--button-outline-secondary-bgColor-hover, var(--as-button-outline-secondary-hover-counter-bg))
+    }
+    
+    .button-outline-secondary:hover .octicon,[open]>.button-outline-secondary .octicon {
+    color: inherit
+    }
+    
+    .button-outline-secondary:active,.button-outline.selected,.button-outline-secondary[aria-selected=true] {
+    color: var(--button-outline-secondary-fgColor-active, var(--as-button-outline-secondary-selected-text));
+    background-color: var(--button-outline-secondary-bgColor-active, var(--as-button-outline-secondary-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-secondary-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-secondary-selected-shadow))
+    }
+    
+    .button-outline-secondary:active:focus,.button-outline-secondary.selected:focus,.button-outline-secondary[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-secondary:active:focus:not(:focus-visible),.button-outline-secondary.selected:focus:not(:focus-visible),.button-outline-secondary[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-secondary:active:focus-visible,.button-outline-secondary.selected:focus-visible,.button-outline-secondary[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-secondary:disabled,.button-outline.disabled,.button-outline-secondary[aria-disabled=true] {
+    color: var(--button-outline-secondary-fgColor-disabled, var(--as-button-outline-secondary-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-secondary-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-secondary:disabled .Counter,.button-outline-secondary.disabled .Counter,.button-outline-secondary[aria-disabled=true] .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-secondary .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-outline-bgColor-rest, var(--as-button-outline-secondary-counter-bg))
+    }
+    
+    .button-outline-dark {
+    color: var(--button-outline-dark-fgColor-rest, var(--as-button-outline-dark-text))
+    }
+    
+    .button-outline-dark:hover,[open]>.button-outline-dark {
+    color: var(--button-outline-dark-fgColor-hover, var(--as-button-outline-dark-hover-text));
+    background-color: var(--button-outline-dark-bgColor-hover, var(--as-button-outline-dark-hover-bg));
+    border-color: var(--button-outline-dark-borderColor-hover, var(--as-button-outline-dark-hover-border));
+    box-shadow: var(--shadow-resting-small, var(--as-button-outline-dark-hover-shadow)),var(--shadow-highlight, var(--as-button-outline-dark-hover-inset-shadow))
+    }
+    
+    .button-outline-dark:hover .Counter,[open]>.button-outline-dark .Counter {
+    background-color: var(--button-outline-dark-bgColor-hover, var(--as-button-outline-dark-hover-counter-bg))
+    }
+    
+    .button-outline-dark:hover .octicon,[open]>.button-outline-dark .octicon {
+    color: inherit
+    }
+    
+    .button-outline-dark:active,.button-outline.selected,.button-outline-dark[aria-selected=true] {
+    color: var(--button-outline-dark-fgColor-active, var(--as-button-outline-dark-selected-text));
+    background-color: var(--button-outline-dark-bgColor-active, var(--as-button-outline-dark-selected-bg));
+    border-color: var(--button-outline-borderColor-active, var(--as-button-outline-dark-selected-border));
+    box-shadow: var(--button-outline-shadow-selected, var(--as-button-outline-dark-selected-shadow))
+    }
+    
+    .button-outline-dark:active:focus,.button-outline-dark.selected:focus,.button-outline-dark[aria-selected=true]:focus {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-dark:active:focus:not(:focus-visible),.button-outline-dark.selected:focus:not(:focus-visible),.button-outline-dark[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none
+    }
+    
+    .button-outline-dark:active:focus-visible,.button-outline-dark.selected:focus-visible,.button-outline-dark[aria-selected=true]:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--fgColor-onEmphasis, var(--white))
+    }
+    
+    .button-outline-dark:disabled,.button-outline.disabled,.button-outline-dark[aria-disabled=true] {
+    color: var(--button-outline-dark-fgColor-disabled, var(--as-button-outline-dark-disabled-text));
+    background-color: var(--button-outline-bgColor-disabled, var(--as-button-outline-dark-disabled-bg));
+    border-color: var(--button-default-borderColor-rest, var(--as-border));
+    box-shadow: none
+    }
+    
+    .button-outline-dark:disabled .Counter,.button-outline-dark.disabled .Counter,.button-outline-dark[aria-disabled=true] .Counter {
+    background-color: var(--buttonCounter-outline-bgColor-disabled, var(--as-button-outline-disabled-counter-bg))
+    }
+    
+    .button-outline-dark .Counter {
+    color: inherit;
+    background-color: var(--buttonCounter-outline-bgColor-rest, var(--as-button-outline-dark-counter-bg))
+    }
+    
+    
+    
+    .button-sm {
+    padding: 3px var(--base-size-3);
+    font-size: var(--base-size-3);
+    line-height: 20px
+    }
+    
+    .button-sm .octicon {
+    vertical-align: text-top
+    }
+    
+    .button-large {
+    padding: .75em 1.5em;
+    font-size: inherit;
+    line-height: var(--lineHeight-medium);
+    border-radius: .5em
+    }
+    
+    .button-block {
+    display: block;
+    width: 100%;
+    text-align: center
+    }
+    
+    
+    
+    .button-grouped {
+    display: flex;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+    }
+    
+    .button-grouped .button:first-child:not(:last-child),.file.has-name .file-cta,.input-group .form-input:first-child:not(:last-child),.input-group .form-select:first-child:not(:last-child),.input-group .input-group-addon:first-child:not(:last-child),.input-group .input-group-btn:first-child:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0
+    }
+    
+    .button-grouped .button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    margin-left: -.05rem
+    }
+    
+    .button-grouped .button:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -.05rem
+    }
+    
+    
+    
+    .button-grouped .button.active {
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+    }
+    .octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+    }
+    
+    .button-error .octicon,.button-success .octicon,.button-info .octicon,.button-warning .octicon,.button-primary .octicon,.button-secondary .octicon,.button-dark .octicon {
+    color: var(--button-primary-iconColor-rest, var(--white));
+    }
+    .button-outline-error .octicon {
+    color: var(--button-primary-iconColor-rest, var(--error-color));
+    }
+    
+    .button-outline-success .octicon {
+    color: var(--button-primary-iconColor-rest, var(--success-color));
+    }
+    
+    .button-outline-info .octicon {
+    color: var(--button-primary-iconColor-rest, var(--info-color));
+    }
+    
+    .button-outline-warning .octicon {
+    color: var(--button-primary-iconColor-rest, var(--warning-color));
+    }
+    
+    .button-outline-primary .octicon {
+    color: var(--button-primary-iconColor-rest, var(--primary-color));
+    }
+    
+    .button-outline-secondary .octicon {
+    color: var(--button-primary-iconColor-rest, var(--secondary-color));
+    }
+    
+    .button-outline-dark .octicon {
+    color: var(--button-primary-iconColor-rest, var(--dark-color));
+    }
+    .AnimatedEllipsis::after {
+    display: inline-block;
+    content: "...";
+    animation: 1.2s steps(4, jump-none) infinite AnimatedEllipsis-keyframes;
+    }
+    
+    @keyframes AnimatedEllipsis-keyframes {
+    0% {
+    transform: translateX(-100%);
+    }
+    }

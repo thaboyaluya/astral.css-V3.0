@@ -1,0 +1,1 @@
+.panel {-webkit-transition: -webkit-box-shadow .25s;transition: box-shadow .25s, -webkit-box-shadow .25s;padding: 24px;border-radius: 9px;background: var(--dark-panel,--light-panel);-webkit-box-shadow: var(--box-shadow);box-shadow: var(--box-shadow);margin: .5rem 0 1rem;}

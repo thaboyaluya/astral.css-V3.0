@@ -1,0 +1,1 @@
+.divider[data-content] {margin: .8rem 0;}.divider {display: inline-block;width: 100%;border-top: .05rem solid var(--as-border);height: .05rem;margin: .4rem 0;position: relative;}.divider-vertical {width: max-content;height: 100px;margin-left: auto;margin-right: auto;border-left: 1px solid var(--as-border);}
