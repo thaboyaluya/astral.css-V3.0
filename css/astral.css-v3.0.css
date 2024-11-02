@@ -20576,14 +20576,14 @@ user-select: none;
       .offcanvas-left {
           top: 0;
           left: 0;
-          width: 400px;
+          width:60vw;
           border-right: 1px solid var(--as-border);
           transform: translateX(-100%);
       }
       .offcanvas-right {
           top: 0;
           right: 0;
-          width: 400px;
+          width: 60vw;
           border-left: 1px solid var(--as-border);
           transform: translateX(100%);
       }
